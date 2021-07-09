@@ -33,7 +33,7 @@ public class PatientInfo {
 		public String getPatientId() {
 			return patientId;
 		}
-		public void setPatientId(String patientId) {
+		public  void setPatientId(String patientId) {
 			this.patientId = patientId;
 		}
 		public int getPatientAge() {

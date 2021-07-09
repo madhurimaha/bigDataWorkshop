@@ -1,3 +1,0 @@
-module healthStreamData {
-	requires gson;
-}

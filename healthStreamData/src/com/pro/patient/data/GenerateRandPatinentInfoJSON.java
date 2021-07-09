@@ -1,14 +1,11 @@
 package com.pro.patient.data;
 
-import com.pro.patient.data.PatientInfo.*;
-
-import static com.pro.patient.data.GeneratePatientInfo.generatePatientId;
+import static com.pro.patient.data.GeneratePatientInfo.*;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Map;
 import java.util.Random;
 
 public class GenerateRandPatinentInfoJSON {
@@ -21,16 +18,16 @@ public class GenerateRandPatinentInfoJSON {
 			int records = new Random().nextInt(7);
 			for (int i = 1; i <= records; i++) {
 				PatientInfo  patientInfo = new PatientInfo();
-				PatientInfo.setPatientId(generatePatientId());
-				PatientInfo.setPatientAge(generateAge());
-				PatientInfo.setPatientGender(generateGender());
-				PatientInfo.setAllergies(generateAllergies());
-				PatientInfo.setAilmentHistory(generateAilmentHistory());
-				PatientInfo.setSymptoms(generateSymptoms());
-				PatientInfo.setDiagnosis(generateDiagnosis());
+				patientInfo.setPatientId(generatePatientId());
+				patientInfo.setPatientAge(generateAge());
+				patientInfo.setPatientGender(generateGender());
+				patientInfo.setAllergies(generateAllergies());
+				patientInfo.setAilmentHistory(generateAilmentHistory());
+				patientInfo.setSymptoms(generateSymptoms());
+				patientInfo.setDiagnosis(generateDiagnosis());
 				 
-				// Write the vehicleInfo data into a file
-				bw.append(PatientInfo.toString() + "\n");
+				
+				bw.append(patientInfo.toString() + "\n");
 			}
 			System.out.println("written " + records + " to the file. ");
 			bw.flush();
