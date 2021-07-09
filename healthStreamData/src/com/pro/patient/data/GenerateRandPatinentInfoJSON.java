@@ -29,7 +29,7 @@ public class GenerateRandPatinentInfoJSON {
 				PatientInfo.setSymptoms(generateSymptoms());
 				PatientInfo.setDiagnosis(generateDiagnosis());
 				 
-				// Write the vehicleInfo data into a file
+				
 				bw.append(PatientInfo.toString() + "\n");
 			}
 			System.out.println("written " + records + " to the file. ");
