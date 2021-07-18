@@ -26,7 +26,6 @@ public class GenerateRandPatinentInfoJSON {
 				patientInfo.setSymptoms(generateSymptoms());
 				patientInfo.setDiagnosis(generateDiagnosis());
 				 
-				
 				bw.append(patientInfo.toString() + "\n");
 
 			}
@@ -35,8 +34,8 @@ public class GenerateRandPatinentInfoJSON {
 			bw.close();
 			Thread.sleep(2000);
 		}
-
+	}
 	}
 	
 
-}
+
