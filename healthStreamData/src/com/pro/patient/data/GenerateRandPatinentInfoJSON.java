@@ -28,6 +28,7 @@ public class GenerateRandPatinentInfoJSON {
 				 
 				
 				bw.append(patientInfo.toString() + "\n");
+
 			}
 			System.out.println("written " + records + " to the file. ");
 			bw.flush();
