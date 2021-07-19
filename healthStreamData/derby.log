@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Jul 18 20:13:10 IST 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017a-ba12-28bd-000001ccdd88 
+on database directory /Users/madhurim/eclipse-workspace/healthStreamData/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@482bce4f 
+Loaded from file:/Users/madhurim/local/spark/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=10.0.1+10
+user.dir=/Users/madhurim/eclipse-workspace/healthStreamData
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.16
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

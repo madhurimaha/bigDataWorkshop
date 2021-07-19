@@ -20,5 +20,15 @@ public class SimpleKafkaProducer {
 		
 
 	}
+		
+	public static void sendDataToKafkaMultipleBroker(String msg, String topicName, String key) {
+			Properties props = new Properties();
+			props.put("bootstrap.servers", "localhost:9092,localhost:9093,localhost:9094");
+			props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+			props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+			Producer<String, String> producer = new KafkaProducer<String, String>(props);
+			producer.send(new ProducerRecord<String, String>(topicName, key, msg));
+			producer.close();
+		}
 
 }

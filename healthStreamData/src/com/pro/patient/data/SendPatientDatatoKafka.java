@@ -16,7 +16,7 @@ public class SendPatientDatatoKafka {
 
 			while (true) {
 				
-				int records = new Random().nextInt(15);
+				int records = new Random().nextInt(40);
 				for (int i = 1; i <= records; i++) {
 					PatientInfo  patientInfo = new PatientInfo();
 					patientInfo.setPatientId(generatePatientId());
@@ -28,13 +28,15 @@ public class SendPatientDatatoKafka {
 					patientInfo.setDiagnosis(generateDiagnosis());
 					 
 					
-				 SimpleKafkaProducer.sendDataToKafkaSingleBroker(patientInfo.toString(),"patientInfo");
+				// SimpleKafkaProducer.sendDataToKafkaSingleBroker(patientInfo.toString(),"patientInfo");
 					//System.out.println(patientInfo);
+					
+					SimpleKafkaProducer.sendDataToKafkaMultipleBroker(patientInfo.toString(), "patient-info-kafka",patientInfo.getPatientGender());
 				}
 				
 				
 				System.out.println("Written " + records + " to Kafka..");
-				Thread.sleep(3000);
+				Thread.sleep(5);
 			}
 
 

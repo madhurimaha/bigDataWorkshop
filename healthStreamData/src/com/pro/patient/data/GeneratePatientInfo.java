@@ -37,7 +37,7 @@ public class GeneratePatientInfo {
 		return GenderArray[new Random().nextInt(GenderArray.length)];
 	}
 	public static int generateAge() {
-		return new Random().nextInt();
+		return new Random().nextInt(100);
 	}
 	public static String generateAllergies(){
 		String[] AllergyArray = { "Penicillin", "Sulpha", "Iodine" ,"Food","Others","None"};
